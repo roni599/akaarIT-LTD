@@ -28,6 +28,6 @@ class ImportCustomersJob implements ShouldQueue
     {
         Excel::import(new CustomersImport, Storage::path($this->filePath));
         Storage::delete($this->filePath);
-        Mail::to('ekroni99@gmail.com')->send(new ImportCompleted());
+        Mail::to('career@akaarit.com')->send(new ImportCompleted());
     }
 }
